@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desenvolvimento de Sites e Análise de Dados</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/form.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("a").on("click", function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var gato = this.hash;
+          $("html, body").animate({
+            scrollTop: $(gato).offset().top
+          }, 800, function(){
+            window.location.hash = gato;
+          });
+        }
+      });
+    });
+  </script> 
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#" onclick="location.reload();">
+        <img src="assets/img/aileron_Easy-Resize.com.jpg" alt="Logo da empresa">
+      </a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <i class="fa fa-bars" id="btn-menu"></i>
+    </nav>
+  </header>
+
+  <div class="title">
+  </div>
+  <div class="image-container">
+    <img src="assets/img/aileron banner.png" alt="aileron">
+  </div>
+  <section id="services" class="section-services">
+    <h2 class="section-title">Serviços</h2>
+    <div class="section-services">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card">
+                  <i class="fas fa-chart-line"></i>
+                  <img src="assets/img/Paulo_web_site_creation_landing_page_ui_ux_73486a87-8111-46ec-97f7-05b539c9a687.png" alt="Desenvolvimento de Sites">
+                  <div class="card-body">
+                    <h5 class="card-title" style="text-align: center; font-size: 25px;">Desenvolvimento de Sites</h5>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Abrir Modal</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <i class="fas fa-chart-line"></i>
+                  <img src="assets/img/Paulo_ecommerce_web_site_eletronics_products_ui_ux_ed03afbe-dc24-4849-a3f9-a377adeb663a.png" alt="E-Commerce">
+                  <div class="card-body">
+                      <h5 class="card-title" style="text-align: center; font-size: 25px;">E-Commerce</h5>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <i class="fas fa-chart-line"></i>
+                  <img src="assets/img/analise-dados.png" alt="Análise de Dados">
+                  <div class="card-body">
+                      <h5 class="card-title" style="text-align: center; font-size: 25px;">Análise de Dados</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
+  <section id="about" class="section-about">
+    <h2 class="section-title">Sobre</h2>
+    <p class="section-text">
+      "Transforme o seu negócio em algo realmente excepcional! Com os nossos serviços de desenvolvimento de sites, e-commerce e suporte em análise de dados, você terá a vantagem competitiva que precisa para alavancar o seu negócio. Não perca mais tempo, deixe isso com a gente. Nós fornecemos soluções personalizadas e inovadoras para ajudá-lo a atingir seu potencial máximo. Não perca mais tempo, experimente nossos serviços agora e sinta a diferença em seu negócio."
+    </p>
+  </section>
+  <section id="contact" class="section-contact">
+    <h2 class="section-title">Contato</h2>
+    <form action="https://formspree.io/f/mnqyjveb" method="post">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+        <button class="btn-enviar" type="submit" style="background-color: #2596be; color: #ffffff; padding: 15px 200px; border-radius: 50px; font-size: 25px;">Enviar</button>
+    </form>
+  </section>
+  
+  <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tituloModal">Título do Modal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="margin: 0; padding: 0; height: 100vh; width: 100vw; background: linear-gradient(72deg, #2596be 1%, white 99%);">
+          <div class="content" style="height: 850px; width: 1800px; border-radius: 20px; overflow: hidden; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"> 
+            
+            <div class="slides">
+
+              <input type="radio" name="slide" id="slide1" checked>
+              <input type="radio" name="slide" id="slide2">
+              <input type="radio" name="slide" id="slide3">
+
+              <div class="slide s1">
+                <img src="/assets/img/aileron.png" alt="desc. imagem 1">
+              </div>
+
+              <div class="slide s2">
+                <img src="/assets/img/aileron.png" alt="desc. imagem 2">
+              </div>
+
+              <div class="slide s3">
+                <img src="/assets/img/aileron.png" alt="desc. imagem 3">
+              </div>
+
+            </div>
+
+            <div class="navigation">
+
+              <label class="bar" for="slide1">Teste</label>
+              <label class="bar" for="slide2" style="width: 70px; height: 17px; border: 2px solid #ffffff; margin: 6px; border-radius: 5px; cursor: pointer;">Teste</label>
+              <label class="bar" for="slide3" style="width: 70px; height: 17px; border: 2px solid #ffffff; margin: 6px; border-radius: 5px; cursor: pointer;">Teste</label>
+
+            </div>
+
+          Conteúdo do Modal
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Salvar mudanças</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
